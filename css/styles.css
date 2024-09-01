@@ -1,0 +1,164 @@
+/* custom-properties */ 
+:root{
+    --bs-blue: #037bc0;
+    --bs-green:#8cbc00;
+}
+
+html{
+    font-size: 62.5%; /* 1 rem - 10px */
+}
+
+body{
+    font-family: 'Raleway',sans-serif;
+    font-size: 1.6rem;  
+    line-height: 2;
+    line-height: 2;
+}
+
+/* fuente para h1,h2,h3 */
+h1,h2,h3 {
+    font-family: "Playfair Display", serif;
+}
+
+
+
+/* reescribimos un color de boostrap */
+/* se lo aplicamos a la clase .text-primary y .nombre-sitio */
+.text-primary,.nombre-sitio {
+    color: var(--bs-blue)!important;
+}
+
+
+.btn-success{
+   background-color: var(--bs-green)!important;
+   transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color:rgb(14, 188, 23)!important;
+}
+
+.bg-primary,
+.btn-primary{
+    background-color: var(--bs-blue)!important;
+}
+
+
+
+
+.hero{
+    background-image:url(../img/principal.jpg);
+    height: 25rem;
+    background-size: cover; /* llena todo el espacio disponible del div con la imagen */
+    background-position: center center; /* centra la imagen en dispositivos grandes */
+    /* background-repeat: no-repeat; no es necesario cuando usas el size de cover */
+}
+
+
+h1{
+    font-size: 3.8rem;
+}
+/* media queries para tamaños de tables medianos */
+
+@media (min-width: 768px){
+    h1{
+        font-size:5rem; /* para valores de pantalla superiores a 768px toma este valor de font-size */
+        font-weight: bold;
+    }
+
+    .hero{
+        height: 55rem;
+
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+@media (min-width: 768px){
+    h2{
+        font-size:4rem; /* para valores de pantalla superiores a 768px toma este valor de font-size */
+        font-weight: bold;
+    }
+
+    .hero{
+        height: 55rem;
+
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+@media (min-width: 768px){
+    h3{
+        font-size:3rem; /* para valores de pantalla superiores a 768px toma este valor de font-size */
+        font-weight: bold;
+    }
+
+    .hero{
+        height: 55rem;
+
+    }
+}
+
+
+
+
+/* con esta media querie hacemos que la barra hamburguesa y el nombre no esten pegadas a las orillas y quede perfecto */
+/* solo para eso se agrega la clase container-xs para aplicar eso */
+@media (max-width: 768px){
+    .container-xs{
+        margin: 5rem;
+    }
+    .p-nosotros{ /* esta clase se crea, para que los parrafos de la seccion nostros tengan un margen mejor para moviles */
+        text-align: center;
+        margin: 3rem;
+    }
+
+    .text-center-phone{
+        text-align: center;
+        margin: 3rem;
+    }
+
+    .btn-blog{
+       text-align: center;
+    }
+}
+
+/* productos  */
+
+@media (min-width: 768px){
+    .producto img {
+        height: 43rem;
+        width: 100%;
+        object-fit: cover; /* con objet fit le decimos que tome la altura, el ancho de 100% pero no te deformes */
+    }
+}
+
+.categoria img{
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.categoria img:hover{
+    transform: scale(1.2);
+
+
+}
+
+
+/* nosotros */
+.borde{
+    border-radius: 3rem;
+}
+
+/*formulario */
+
+.form-control{
+    padding: 1rem;
+    font-size: 1.6rem;
+
+}

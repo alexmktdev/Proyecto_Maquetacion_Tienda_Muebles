@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- fuente de google fonts - Raleway-- playfair display :   font-family: "Raleway", sans-serif;   font-family: "Playfair Display", serif;-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        
+        <!-- link de boostrap , incluye un archivo normalize-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+              crossorigin="anonymous">
+
+        <!-- link de css -->
+        <link rel="stylesheet" href="./css/styles.css"> 
+        <title> Nosotros </title>
+    </head>
+
+
+    <body>
+
+            <!--                Header
+                 py-5 - padding de 5 en todas direcciones
+                 tex-center - texto centrado el h1 
+                 text-primary - color primary que modificamos que venia de boostrap
+            -->
+            <header class="py-5">
+                 <h1 class="text-center">Tienda <span class="text-primary">Muebles</span></h1>
+            </header>
+
+            <!--    Barra de Navegacion   
+                navbar-nav- convierte los enlaces en una barra de navegacion de boostrap 
+                container - para centrar un poco el contenido de la navbar 
+                text-center - para que la barra se centre en dispositivos mas pequeños , está utilizando mobile-first 
+                d-flex habiliata display flex para dispositivos grandes (para despues poner la barra a lo largo en dispositivos grandes)
+                flex-md-row - cambia la direccion de flexbox en tamaños medianos (mayor a 768px )
+                justify-content-md-betweeen se usa para distribuir la barra a lo largo de toda la pantalla mayor a 768px
+                text-dark - pone el texto de la barra de nav 
+                text-decoration-none - quita la linea de los enlaces de la navbar
+                navbar-brand d-lg-none : tienda muebles aparece al lado de la barra de nav en pantallas menores a 786px y que a la vez desaparece en pantallas mayores a ese valor
+                fs-2 : font-size:2; 
+                fw-bold: font-weigth:2;
+                text-uppercase: texto en mayusculas completo
+                navbar-toggler-icon hace que aparezca el cuadrito del menu hamburgesa
+                todo lo que tiene navbar, toggler , data-bs-toggler, data-bs-tarjet collapse etc, son para generar el boton de menu hamburguesa, debe ir asi y punto
+                la clase container-xs , se usa solo para darle a ese contenedor div una media querie para dispositivos pequeños menores a 576px de ancho, solo para eso
+            -->
+
+
+
+            <!-- BARRA DE NAVEGACION -->
+            <div class="border-top py-4 container-xs"> <!-- Contenedor principal de la barra de navegacion -->
+                <div class="navbar navbar-expand-lg container navbar-light">  <!-- este servirá para ocultar y mostrar la navbar en pantallas pequeñas-->
+                    <a class="navbar-brand nombre-sitio d-lg-none fs-2 fw-bold text-uppercase" href="index.html">
+                            TIENDA MUEBLES  <!-- este texto se debe ocultar en dispositivos mas grandes (mayores a 786px)-->
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                        <div id="navegacion" class="collapse navbar-collapse">
+                            <nav class="navbar-nav container d-flex flex-md-row text-center justify-content-md-between">
+                                <a class="text-dark text-decoration-none" href="index.html">Inicio</a>
+                                <a class="text-dark text-decoration-none" href="nosotros.html">Nosotros</a>
+                                <a class="text-dark text-decoration-none" href="tienda.html">Tienda</a>
+                                <a class="text-dark text-decoration-none" href="blog.html">Blog</a>
+                                <a class="text-dark text-decoration-none" href="galeria.html">Galería</a>
+                                <a class="text-dark text-decoration-none" href="contacto.html">Contacto</a>
+                            </nav>
+                        </div>
+                </div>
+            </div>
+
+
+         
+
+            
+            <main class="container-xl py-5">
+                <h2 class="text-center my-5"> Sobre Nosotros</h2>
+
+                <div class="row g-5 d-flex align-items-center">
+
+                    <!-- imagen -->
+                    <div class="col-md-6">
+                        <img class="img-fluid borde" src="./img/nosotros.jpg" alt="nosotros">
+                    </div>
+
+                    <!-- texto -->
+                    <div class="col-md-6">
+                        <p class="p-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                           Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                           Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                           Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                        </p>
+
+                        <p class="p-nosotros">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                            Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                            Corrupti temporibus mollitia soluta quasi. Libero, minus!
+                        </p>
+                    </div>
+
+                </div>
+
+               
+
+            </main>
+
+
+             <footer class="pt-2 mt-5 border-top mt-footer-mobile">
+                    <div class="container-xl mt-5">
+                        <!-- fila para las 3 columnas del footer-->
+                            <div class="row text-center">
+
+                                <!-- 1er footer-->
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                        <h3 class="mb-4">Categorías</h3>
+                                        <nav class="d-flex flex-column">
+                                            <a class="text-dark text-decoration-none" href="#">Cocina</a>
+                                            <a class="text-dark text-decoration-none" href="#">Oficina</a>
+                                            <a class="text-dark text-decoration-none" href="#">Jardin</a>
+                                            <a class="text-dark text-decoration-none" href="#">Cochera</a>
+                                            <a class="text-dark text-decoration-none" href="#">Dormitorio</a>
+                                        </nav>
+                                </div>
+
+                                <!-- 2do footer-->
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                        <h3 class="mb-4">Sobre Nosotros</h3>
+                                        <nav class="d-flex flex-column">
+                                            <a class="text-dark text-decoration-none" href="#">Nuestra Historia</a>
+                                            <a class="text-dark text-decoration-none" href="#">Misión, Vision y Valores</a>
+                                            <a class="text-dark text-decoration-none" href="#">Carreras</a>
+                                            <a class="text-dark text-decoration-none" href="#">Política de Privacidad</a>
+                                            <a class="text-dark text-decoration-none" href="#">Términos del Servicio</a>
+                                        </nav>
+                                </div>
+
+                                <!-- 3er footer-->
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                        <h3 class="mb-4">Soporte</h3>
+                                        <nav class="d-flex flex-column">
+                                            <a class="text-dark text-decoration-none" href="#">Preguntas Frecuentes</a>
+                                            <a class="text-dark text-decoration-none" href="#">Ayuda en Línea</a>
+                                            <a class="text-dark text-decoration-none" href="#">Confianza y Seguridad</a>
+                                        </nav>
+                                </div>
+
+                                
+
+                            </div>
+                            <p class="mt-5 text-center fs-2">Todos Los derechos Reservados - Tienda Muebles</p>
+                    </div>
+             </footer>
+
+
+
+    <!-- js de boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+            crossorigin="anonymous"></script>
+    </body>
+</html>
